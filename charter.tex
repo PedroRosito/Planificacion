@@ -14,8 +14,8 @@
 \autor{Rosito Pedro} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Nelson Fortunatti}
+\pertenenciaDirector{ITBA} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
@@ -62,12 +62,10 @@
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-1.0      & Creación del documento                                          & 27/06/2020 \\ \hline
-1.1      &                                                                 & dd/mm/aaaa \\ \hline
-1.2      & Otro ejemplo \newline
-		   Con texto partido \newline
-		   En varias líneas \newline
-		   A propósito                                                     & dd/mm/aaaa \\ \hline
+1.0      & Creación del documento                                          & 25/08/2020 \\ \hline
+1.1      & Se completó la descripción del proyecto & 2/09/2020 \\ \hline
+1.2      & Se completaron parcialmente los puntos del 1 al 6 & 3/09/2020 \\ \hline
+1.3		& Se terminó con los puntos del 1 al 6 y se completó la identificación y análisis de los interesados & 6/09/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -84,7 +82,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de control de temperatura de un calefón, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en un sistema de identificación mobile utilizando tecnología bluetooth, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -107,54 +105,29 @@ Se adjunta a esta acta la planificación inicial.
 \section{Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red}
-El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
-Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
-
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
-
-\begin{itemize}
-\item ¿Cómo se vincula este proyecto con la misión de la organización?
-\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-\item ¿Cuales son las necesidades que debe satisfacer?
-\item ¿Por dónde pasa la innovación?
-\end{itemize}
-
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+Surix es una empresa que se dedica al diseño y venta de porteros IP para el uso domiciliario, hospitalario y empresarial. 
+Entre sus productos se destacan diferentes tipos de porteros, algunos de ellos presentan la posibilidad de manejarse mediante un celular con una aplicación llamada VoIPBell. Ésta aplicación tiene la limitación de poder manejar un sólo portero a la vez. \newline
+Teniendo en cuenta que estamos frente a un contexto de cambio tecnológico en el mundo donde cada vez más servicios se pueden incluir en un celular y realizar de manera automatizada, se presenta un panoráma ideal para plantear avances en materia de comododiad funcional en aspectos de la vida diaria. \newline
+Éste proyecto de ID Mobile viene a aportar la posibilidad de contar con una aplicación en la que los usuarios puedan crearse una cuenta mediante la cuál puedan tener acceso a todas las puertas en las que tengan instalado un portero bluetooth, puede ser tanto de su casa como de su trabajo. Teniendo la posibilidad de programarlas, para que se abran a cierta hora de forma periódica, para dar acceso de única vez, para hacer control de rondas, etc. La aplicación propuesta se comunicará con un servidor el cuál tendrá acceso a una base de datos en la cuál estarán guardadas las cuentas de los diferentes usuarios, ya sean administradores o usuarios llanos. A su vez la base de datos tendrá conocimiento, previa carga por parte del usuario, de todas las puertas bluetooth instaladas, de manera de poder asociarlas a los usuarios correspondientes. En la Figura 1 se muestra un diagrama de bloques en el que se puede observar el funcionamiento del sistema. 
 
 \vspace{25px}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama en bloques del sistema}
+\includegraphics[width=.9\textwidth]{./Figuras/Diagramadebloques_planificacion.png}
+\caption{Diagrama en bloques del sistema ID Mobile}
 \label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
 
-El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
-\end{consigna}
+Observamos en la figura que existen dos opciones, opción 1 y opción 2, esto se debe a que el sistema se vendera como parte de un sistema mayor comandando por una placa madre (portero) que conocerá los permisos de cada usuario y en base a eso decidirá que acciones se deben llevar a cabo una vez recibida la señal por parte de la placa receptora (opción 1) o por otra parte el sistema se venderá de forma standalone, es decir que existirá la placa receptora junto con la placa de apertura asociadas a una puerta y la aplicación será la que decida a partir de lo comunicado por el software en la nube si la puerta en cuestión puede o no abrirse (opción 2).
+
 
 
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} 
-Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
- 
-Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
-
-\begin{itemize}
-\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
-\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
-\end{itemize}
-
-Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -163,112 +136,104 @@ Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por e
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
+Cliente       & \clientename      &\empclientename	& CTO       	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Colaborador        & Raúl Camacho      & SURiX SRL       & Desarrollador de software        	\\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los Orientadores.
 
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Sería deseable listar a continuación de la tabla las principales características de cada interesado.
- 
-Por ejemplo:
 \begin{itemize}
-\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
+\item Sergio Starkloff: No se encuentra actualmente en Argentina, pero a pesar de la diferencia horaria practicamente siempre está disponible para hacerle consultas. Está muy atento a todo lo referente al proyecto y siempre llega con nuevas propuestas e ideas. 
+\item Nelson Fortunatti: Tiene mucho conocimiento de programación de microprocesadores por lo que su orientación será fundamental al momento de crear el software para la placa.
+\item Raúl Camacho: Trabajaremos juntos en el diseño del hardware del proyecto, ya que es compartido con su trabajo de especialización.
 \end{itemize}
 
-\end{consigna}
+
 
 
 
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
 
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
-\end{consigna}
+El propósito de éste proyecto es el de crear un sistema nuevo para la empresa, aprovechando la conectividad con la que cuentan prácticamente todos los celulares hoy en dia, abriendo la posibilidad de comenzar con una rama de productos orientada al internet de las cosas.
+
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
-
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
-
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
-
-\end{consigna}
+En éste proyecto se incluye:
+\begin{itemize}
+\item El diseño de la placa receptora, utilizando un módulo previamente adquirido por la empresa, a través de un esquemático en Kicad.
+\item El diseño de la placa de apertura, a través de un esquemático en Kicad.
+\item La programación de un software en la placa receptora para la comunicación vía bluetooth con un celular.
+\item La creación de un software en aws (o algún servicio en la nube a determinar).
+\item La creación de una base de datos en aws (o algún servicio en la nube a determinar).
+\item La creación de una aplicación que pueda funcionar tanto en iOS como en Android.
+\end{itemize}
+En éste proyecto no se incluye:
+\begin{itemize}
+\item El diseño del pcb de las placas ni la implementación física de las mismas.
+\item Ninguna etapa del diseño ni implementación de la placa madre.
+\end{itemize}
 
 
 \section{3. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-\item Supuesto 1
-\item Supuesto 2...
+\item Las placas estarán implementadas en tiempo y forma para poder realizar las pruebas necesarias.
+\item La programación de la aplicación que pueda funcionar en Android e iOS no será demasiado compleja para el tiempo estimado de realización de la tarea.
+\item La complejidad de la programación del software para la placa receptora no será demasiado elevada para el tiempo estimado de realización de la tarea.
+\item Será posible implementar todas las funciones requeridas para la aplicación.
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
 
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
 
 \begin{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Requerimientos asociados con la placa receptora.
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2
-	\item Requerimiento 3 (prioridad menor)
+	\item Podrá comunicarse mediante bluetooth con un celular.
+	\item Será capaz de recibir alimentación y comunicarse mediante UART con una placa madre.
+	\item Será capaz de recibir alimentación y comunicarse mediante 5 pines con una placa de apertura.
+	\item Dispondrá de un jumper para cambiar de comportamiento para los dos casos anteriores.
+	\item Podrá enviar una orden de apertura a la placa de apertura mediante un tren de pulsos.
+	\item La lógica de apertura no puede ser simulada de forma externa para evitar el vandalismo o robo.
 	\end{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Requerimientos asociados con la placa de apertura.
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2 (prioridad menor)
+	\item Será capaz de alimentar y comunicarse mediante 5 pines con la placa receptora.
+	\item Podrá interpretar el tren de pulsos enviado por la placa receptora mediante un circuito contador o alguna lógica sencilla.
+	\item Contará con un relé que se utilizará para abrir la puerta.
+	\item Contará con una bocina para avisar de la apertura de la puerta.
+	\item Podrá ser alimentada con 12V de alterna o continua.
+	\end{enumerate}
+\item Requerimientos asociados con la aplicación (mínimo producto viable)
+	\begin{enumerate}
+	\item Deberá ser capaz de comunicarse por bluetooth con la placa receptora y mediante internet con el software en la nube.
+	\item Deberá presentar una interfaz de usuario mediante la cuál gestionar el uso de las puertas disponibles.
+	\item Deberá constituir un consumo muy bajo para la batería del celular.
+	\item Se debe comunicar periódicamente con el software en la nube para revalidar permisos.
+	\item La comunicación entre la aplicación y la placa receptora debe ser segura.
+	\end{enumerate}
+\item Requerimientos asociados con el sistema.
+	\begin{enumerate}
+	\item Debe funcionar en la nube (aws o alguna otra a determinar).
+	\item Debe permitir a los usuarios crear una cuenta y asociarla a sus puertas.
+	\item Debe permitir a los usuarios administrar sus puertas, cargándolas o eliminándolas del sistema, dando permisos a otros usuarios ya sea de forma periódica, de única vez o en franjas horarias determinadas.
+	\item Debe permitir la configuración de la cuenta creada (cambiar foto, nombre, contraseña, etc.)
+	\item Debe poder generar reportes de movimiento, tanto de usuarios como de cerraduras.
 	\end{enumerate}
 \end{enumerate}
 
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-\item Ser breve y conciso (nadie lee cosas largas). 
-\item Ser específico: no dejar lugar a confusiones.
-\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
@@ -280,53 +245,80 @@ Descripción: En esta sección se deben incluir las historias de usuarios y su p
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Cosas como: 
 \begin{itemize}
-\item Manual de uso
-\item Diagrama esquemático
-\item Código fuente
-\item Diagrama de instalación
-\item Informe final
+\item Esquemático de las placas receptora y de apertura.
+\item Aplicación funcional para Android e iOS.
+\item Software para la placa receptora que cumpla con los requerimientos especificados.
+\item Software y base de datos en la nube.
+\item Repositorio con el código fuente utilizado.
+\item Documentación referente al código creado.
 
 \end{itemize}
 
-\end{consigna}
 
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-Se recomienda mostrar el WBS mediante una lista indexada:
 
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Planificación del proyecto (30 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Reuniones con el cliente para acordar los diferentes puntos. (5 hs)
+	\item Estudio de los requerimientos planteados por el cliente (15 hs)
+	\item Creación de la documentación. (10 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+\item Investigación previa (100 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Estudio del módulo MDBT42Q de Raytac. (20 hs)
+	\item Estudio y preparación del SDK de Nordic para el desarrollo del software en placa. (20 hs)
+	\item Estudio sobre programación en la nube. (20 hs)
+	\item Estudio sobre el protocolo de comunicación bluetooth. (20 hs)
+	\item Estudio sobre la programación de aplicaciones híbridas. (20hs)
 	\end{enumerate}
-	\item Grupo de tareas 3
+\item Selección de recursos a utilizar (55 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
-	\item Tarea 4 (tantas hs)
-	\item Tarea 5 (tantas hs)
+	\item Selección de la nube de alguna compañia. (10 hs)
+	\item Selección de componentes para el diseño de las placas. (15 hs)
+	\item Selección de los lenguajes de programación a utilizar. (15 hs)
+	\item Selección de los entornos de trabajo para la realización del software. (15 hs)
 	\end{enumerate}
+\item Desarrollo del hardware (60 hs)
+	\begin{enumerate}
+	\item Realización de la lógica para la apertura de la puerta (20 hs)
+	\item Realización del esquemático de la placa receptora. (20 hs)
+	\item Realización del esquemático de la placa de apertura. (20 hs)
+	\end{enumerate}
+\item Desarrollo del software (275 hs)
+	\begin{enumerate}
+	\item Desarrollo del software en la nube (65 hs)
+		\begin{enumerate}
+		\item Desarrollo de la interfaz principal de usuario. (10 hs)
+		\item Desarrollo de la interfaz y funcionalidad para la creación de cuenta. (15 hs)
+		\item Desarrollo de la interfaz y funcionalidad para la configuración de cuenta. (25 hs)
+		\item Desarrollo de la comunicación con la base de datos. (15 hs)
+		\end{enumerate}
+	\item Desarrollo de la aplicación (140 hs)
+		\begin{enumerate}
+		\item Desarrollo de la interfaz principal de usuario. (20 hs)
+		\item Comunicación con bluetooth para Android e iOS. (30 hs)
+		\item Desarrollo de la interfaz y funcionalidad para la creación de cuenta. (20 hs)
+		\item Desarrollo de la interfaz y funcionalidad para la configuración de cuenta. (30 hs)
+		\item Integración y depuración del código para su funcionamiento tanto en Android como en iOS. (40 hs)
+		\end{enumerate}
+	\item Implementación de la base de datos en la nube. (30 hs)
+	\item Desarrollo del software en la placa receptora. (40 hs)
+	\end{enumerate}
+\item Pruebas de integración (105 hs)
+	\begin{enumerate}
+	\item Implementación de la comunicación entre el software en la nube y la aplicación. (35 hs)
+	\item Implementación de la comunicación vía bluetooth entre el software en la placa y la aplicación. (35 hs)
+	\item Implementación y pruebas del sistema completo. (35 hs)
+	\end{enumerate}
+	
 \end{enumerate}
 
-Cantidad total de horas: (tantas hs)
+Cantidad total de horas: (625 hs)
 
-Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
-
-\end{consigna}
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
