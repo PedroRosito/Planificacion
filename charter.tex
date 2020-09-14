@@ -66,6 +66,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.1      & Se completó la descripción del proyecto & 2/09/2020 \\ \hline
 1.2      & Se completaron parcialmente los puntos del 1 al 6 & 3/09/2020 \\ \hline
 1.3		& Se terminó con los puntos del 1 al 6 y se completó la identificación y análisis de los interesados & 6/09/2020 \\ \hline
+1.4     & Se agregaron las historias de usuario & 14/09/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -238,9 +239,38 @@ Para el desarrollo del presente proyecto se supone que:
 \section{Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
-\end{consigna}
+Ponderación: Se puntúa según el esfuerzo que comprendería llevar a cabo la historia. Siendo 1 el esfuerzo mínimo.
+
+Prioridad: Se puntúa del 1 al 5. Siendo 1 lo más urgente.
+
+Definimos usuario lock como el usuario dueño de puertas.
+
+Definimos usuario key como el usuario que utiliza las puertas.
+
+Definimos como usuario al que hace un uso general del sistema.
+
+\begin{itemize}
+\item Como usuario del sistema, quiero acceder a una web para crear una cuenta.\textit{ Ponderación 5 - Prioridad 1} 
+\item Como usuario del sistema, quiero que exista una aplicación para crear una cuenta.\textit{ Ponderación 7 - Prioridad 4}
+\item Como usuario del sistema, quiero poder acceder a mi cuenta para modificar mis datos.\textit{ Ponderación 3 - Prioridad 2}
+\item Como CTO de Surix, quiero que exista una base de datos en la nube para que los usuarios puedan cargar sus puertas.\textit{ Ponderación 1 - Prioridad 1}
+\item Como gestor de la base de datos, quiero que exista un software en la nube para poder acceder a la base de datos.\textit{ Ponderación 3 - Prioridad 2}
+\item Como usuario del sistema, quiero que la aplicación sea multiplataforma para poder usarla en iOS y Android.\textit{ Ponderación 10 - Prioridad 5}
+\item Como CTO de Surix, quiero que que exista una opción de gestion de cerraduras en el sistema para que los usuarios puedan añadir, quitar o asignar sus puertas.\textit{ Ponderación 5 - Prioridad 2}
+\item Como usuario key del sistema, quiero ver un listado de las puertas a las que tengo acceso para poder gestionarlas.\textit{ Ponderación 5 - Prioridad 1}
+\item Como usuario lock del sistema, quiero ver un listado de mis puertas para poder gestionarlas.\textit{ Ponderación 5 - Prioridad 1}
+\item Como usuario del sistema, quiero que la aplicación requiera de poca energía para que no me consuma rápidamente la batería del celular.\textit{ Ponderación 7 - Prioridad 2}
+\item Como usuario del sistema, quiero que la comunicación entre la aplicación y la puerta sea segura para evitar el vandalismo o robo.\textit{ Ponderación 7 - Prioridad 2}
+\item Como CTO de Surix, quiero que los usuarios reciban un mail de confirmación al crear su cuenta para añadir seguridad al sistema.\textit{ Ponderación 3 - Prioridad 5}
+\item Como CTO de Surix, quiero que el hardware creado sea compatible con el hardware utilizado por la empresa para evitar problemas de integración.\textit{ Ponderación 3 - Prioridad 1}
+\item Como CTO de Surix, quiero que las cuentas creadas tengan conexión entre ellas para que los usuario lock puedan dar acceso a los usuarios key.\textit{ Ponderación 7 - Prioridad 1}
+\item Como usuario del sistema, quiero que que la aplicación esté siempre actualizada con la base de datos para no tener problemas de acceso a mis puertas.\textit{ Ponderación 5 - Prioridad 2}
+\item Como CTO de Surix, quiero que la placa receptora envíe una orden de apertura a la placa de apertura para poder abrir la puerta.\textit{ Ponderación 7 - Prioridad 1}
+\item Como CTO de Surix, quiero que la aplicación se comunique con la placa receptora mediante bluetooth, para que le pueda enviar los datos de identificación.\textit{ Ponderación 10 - Prioridad 1}
+\item Como usuario del sistema, quiero que la aplicación funcione en segundo plano para que no interrumpa otros usos del celular.\textit{ Ponderación 7 - Prioridad 2}
+
+
+\end{itemize}
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
