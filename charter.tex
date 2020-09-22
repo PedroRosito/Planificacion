@@ -1,5 +1,5 @@
 \documentclass[11pt]{charter}
-
+\usepackage{rotating}
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
 \titulo{ID Mobile - Sistema de identificación personal para teléfono móvil, mediante Bluetooth} 
 
@@ -11,7 +11,7 @@
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Rosito Pedro} 
+\autor{Pedro Rosito} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Nelson Fortunatti}
@@ -67,6 +67,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.2      & Se completaron parcialmente los puntos del 1 al 6 & 3/09/2020 \\ \hline
 1.3		& Se terminó con los puntos del 1 al 6 y se completó la identificación y análisis de los interesados & 6/09/2020 \\ \hline
 1.4     & Se agregaron las historias de usuario & 14/09/2020 \\ \hline
+1.5		& Se realizaron correcciones y se completo hasta el punto 11 inclusive & 21/09/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -83,7 +84,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en un sistema de identificación mobile utilizando tecnología bluetooth, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en un sistema de identificación mobile utilizando tecnología Bluetooth, y tendrá un presupuesto preliminar estimado de 715 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -109,7 +110,7 @@ Se adjunta a esta acta la planificación inicial.
 Surix es una empresa que se dedica al diseño y venta de porteros IP para el uso domiciliario, hospitalario y empresarial. 
 Entre sus productos se destacan diferentes tipos de porteros, algunos de ellos presentan la posibilidad de manejarse mediante un celular con una aplicación llamada VoIPBell. Ésta aplicación tiene la limitación de poder manejar un sólo portero a la vez. \newline
 Teniendo en cuenta que estamos frente a un contexto de cambio tecnológico en el mundo donde cada vez más servicios se pueden incluir en un celular y realizar de manera automatizada, se presenta un panoráma ideal para plantear avances en materia de comododiad funcional en aspectos de la vida diaria. \newline
-Éste proyecto de ID Mobile viene a aportar la posibilidad de contar con una aplicación en la que los usuarios puedan crearse una cuenta mediante la cuál puedan tener acceso a todas las puertas en las que tengan instalado un portero bluetooth, puede ser tanto de su casa como de su trabajo. Teniendo la posibilidad de programarlas, para que se abran a cierta hora de forma periódica, para dar acceso de única vez, para hacer control de rondas, etc. La aplicación propuesta se comunicará con un servidor el cuál tendrá acceso a una base de datos en la cuál estarán guardadas las cuentas de los diferentes usuarios, ya sean administradores o usuarios llanos. A su vez la base de datos tendrá conocimiento, previa carga por parte del usuario, de todas las puertas bluetooth instaladas, de manera de poder asociarlas a los usuarios correspondientes. En la Figura 1 se muestra un diagrama de bloques en el que se puede observar el funcionamiento del sistema. 
+Éste proyecto de ID Mobile viene a aportar la posibilidad de contar con una aplicación en la que los usuarios puedan crearse una cuenta mediante la cuál puedan tener acceso a todas las puertas en las que tengan instalado un portero Bluetooth, puede ser tanto de su casa como de su trabajo. Teniendo la posibilidad de programarlas, para que se abran a cierta hora de forma periódica, para dar acceso de única vez, para hacer control de rondas, entre otras funcionalidades. La aplicación propuesta se comunicará con un servidor el cuál tendrá acceso a una base de datos que almacenará las cuentas de los diferentes usuarios, ya sean administradores o usuarios llanos. A su vez la base de datos tendrá conocimiento, previa carga por parte del usuario, de todas las puertas Bluetooth instaladas de manera de poder asociarlas a los usuarios correspondientes. En la Figura 1 se muestra un diagrama de bloques en el que se puede observar el funcionamiento del sistema. 
 
 \vspace{25px}
 
@@ -122,7 +123,7 @@ Teniendo en cuenta que estamos frente a un contexto de cambio tecnológico en el
 
 \vspace{25px}
 
-Observamos en la figura que existen dos opciones, opción 1 y opción 2, esto se debe a que el sistema se vendera como parte de un sistema mayor comandando por una placa madre (portero) que conocerá los permisos de cada usuario y en base a eso decidirá que acciones se deben llevar a cabo una vez recibida la señal por parte de la placa receptora (opción 1) o por otra parte el sistema se venderá de forma standalone, es decir que existirá la placa receptora junto con la placa de apertura asociadas a una puerta y la aplicación será la que decida a partir de lo comunicado por el software en la nube si la puerta en cuestión puede o no abrirse (opción 2).
+Observamos en la figura que existen dos opciones, opción 1 y opción 2, esto se debe a que el sistema se comercializará como parte de un sistema mayor comandando por una placa madre (portero) que conocerá los permisos de cada usuario y en base a eso decidirá que acciones se deben llevar a cabo una vez recibida la señal por parte de la placa receptora (opción 1) o por otra parte el sistema se comercializará de forma standalone, es decir que existirá la placa receptora junto con la placa de apertura asociadas a una puerta y la aplicación será la que decida a partir de lo comunicado por el software en la nube si la puerta en cuestión puede o no abrirse (opción 2).
 
 
 
@@ -170,7 +171,7 @@ En éste proyecto se incluye:
 \begin{itemize}
 \item El diseño de la placa receptora, utilizando un módulo previamente adquirido por la empresa, a través de un esquemático en Kicad.
 \item El diseño de la placa de apertura, a través de un esquemático en Kicad.
-\item La programación de un software en la placa receptora para la comunicación vía bluetooth con un celular.
+\item La programación de un software en la placa receptora para la comunicación vía Bluetooth con un celular.
 \item La creación de un software en aws (o algún servicio en la nube a determinar).
 \item La creación de una base de datos en aws (o algún servicio en la nube a determinar).
 \item La creación de una aplicación que pueda funcionar tanto en iOS como en Android.
@@ -202,12 +203,12 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{enumerate}
 \item Requerimientos asociados con la placa receptora.
 	\begin{enumerate}
-	\item Podrá comunicarse mediante bluetooth con un celular.
+	\item Podrá comunicarse mediante Bluetooth con un celular.
 	\item Será capaz de recibir alimentación y comunicarse mediante UART con una placa madre.
 	\item Será capaz de recibir alimentación y comunicarse mediante 5 pines con una placa de apertura.
 	\item Dispondrá de un jumper para cambiar de comportamiento para los dos casos anteriores.
 	\item Podrá enviar una orden de apertura a la placa de apertura mediante un tren de pulsos.
-	\item La lógica de apertura no puede ser simulada de forma externa para evitar el vandalismo o robo.
+	\item La lógica de apertura no podrá ser realizada de forma externa al sistema para evitar el vandalismo o robo.
 	\end{enumerate}
 \item Requerimientos asociados con la placa de apertura.
 	\begin{enumerate}
@@ -219,7 +220,7 @@ Para el desarrollo del presente proyecto se supone que:
 	\end{enumerate}
 \item Requerimientos asociados con la aplicación (mínimo producto viable)
 	\begin{enumerate}
-	\item Deberá ser capaz de comunicarse por bluetooth con la placa receptora y mediante internet con el software en la nube.
+	\item Deberá ser capaz de comunicarse por Bluetooth con la placa receptora y mediante internet con el software en la nube.
 	\item Deberá presentar una interfaz de usuario mediante la cuál gestionar el uso de las puertas disponibles.
 	\item Deberá constituir un consumo muy bajo para la batería del celular.
 	\item Se debe comunicar periódicamente con el software en la nube para revalidar permisos.
@@ -239,35 +240,33 @@ Para el desarrollo del presente proyecto se supone que:
 \section{Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-Ponderación: Se puntúa según el esfuerzo que comprendería llevar a cabo la historia. Siendo 1 el esfuerzo mínimo.
+Ponderación: se puntúa según el esfuerzo que comprendería llevar a cabo la historia. El valor 1 representa el esfuerzo mínimo.
 
-Prioridad: Se puntúa del 1 al 5. Siendo 1 lo más urgente.
+Prioridad: se puntúa del 1 al 5, donde el valor 1 representa lo más urgente.
 
 Definimos usuario lock como el usuario dueño de puertas.
 
 Definimos usuario key como el usuario que utiliza las puertas.
 
-Definimos como usuario al que hace un uso general del sistema.
-
 \begin{itemize}
-\item Como usuario del sistema, quiero acceder a una web para crear una cuenta.\textit{ Ponderación 5 - Prioridad 1} 
-\item Como usuario del sistema, quiero que exista una aplicación para crear una cuenta.\textit{ Ponderación 7 - Prioridad 4}
-\item Como usuario del sistema, quiero poder acceder a mi cuenta para modificar mis datos.\textit{ Ponderación 3 - Prioridad 2}
-\item Como CTO de Surix, quiero que exista una base de datos en la nube para que los usuarios puedan cargar sus puertas.\textit{ Ponderación 1 - Prioridad 1}
-\item Como gestor de la base de datos, quiero que exista un software en la nube para poder acceder a la base de datos.\textit{ Ponderación 3 - Prioridad 2}
-\item Como usuario del sistema, quiero que la aplicación sea multiplataforma para poder usarla en iOS y Android.\textit{ Ponderación 10 - Prioridad 5}
-\item Como CTO de Surix, quiero que que exista una opción de gestion de cerraduras en el sistema para que los usuarios puedan añadir, quitar o asignar sus puertas.\textit{ Ponderación 5 - Prioridad 2}
-\item Como usuario key del sistema, quiero ver un listado de las puertas a las que tengo acceso para poder gestionarlas.\textit{ Ponderación 5 - Prioridad 1}
-\item Como usuario lock del sistema, quiero ver un listado de mis puertas para poder gestionarlas.\textit{ Ponderación 5 - Prioridad 1}
-\item Como usuario del sistema, quiero que la aplicación requiera de poca energía para que no me consuma rápidamente la batería del celular.\textit{ Ponderación 7 - Prioridad 2}
-\item Como usuario del sistema, quiero que la comunicación entre la aplicación y la puerta sea segura para evitar el vandalismo o robo.\textit{ Ponderación 7 - Prioridad 2}
-\item Como CTO de Surix, quiero que los usuarios reciban un mail de confirmación al crear su cuenta para añadir seguridad al sistema.\textit{ Ponderación 3 - Prioridad 5}
-\item Como CTO de Surix, quiero que el hardware creado sea compatible con el hardware utilizado por la empresa para evitar problemas de integración.\textit{ Ponderación 3 - Prioridad 1}
-\item Como CTO de Surix, quiero que las cuentas creadas tengan conexión entre ellas para que los usuario lock puedan dar acceso a los usuarios key.\textit{ Ponderación 7 - Prioridad 1}
-\item Como usuario del sistema, quiero que que la aplicación esté siempre actualizada con la base de datos para no tener problemas de acceso a mis puertas.\textit{ Ponderación 5 - Prioridad 2}
-\item Como CTO de Surix, quiero que la placa receptora envíe una orden de apertura a la placa de apertura para poder abrir la puerta.\textit{ Ponderación 7 - Prioridad 1}
-\item Como CTO de Surix, quiero que la aplicación se comunique con la placa receptora mediante bluetooth, para que le pueda enviar los datos de identificación.\textit{ Ponderación 10 - Prioridad 1}
-\item Como usuario del sistema, quiero que la aplicación funcione en segundo plano para que no interrumpa otros usos del celular.\textit{ Ponderación 7 - Prioridad 2}
+\item Como usuario del sistema quiero acceder a una web para crear una cuenta.\textit{ Ponderación 5 - Prioridad 1} 
+\item Como usuario del sistema quiero que exista una aplicación para crear una cuenta.\textit{ Ponderación 7 - Prioridad 4}
+\item Como usuario del sistema quiero poder acceder a mi cuenta para modificar mis datos.\textit{ Ponderación 3 - Prioridad 2}
+\item Como CTO de Surix quiero que exista una base de datos en la nube para que los usuarios puedan cargar sus puertas.\textit{ Ponderación 1 - Prioridad 1}
+\item Como gestor de la base de datos quiero que exista un software en la nube para poder acceder a la base de datos.\textit{ Ponderación 3 - Prioridad 2}
+\item Como usuario del sistema quiero que la aplicación sea multiplataforma para poder usarla en iOS y Android.\textit{ Ponderación 10 - Prioridad 5}
+\item Como CTO de Surix quiero que exista una opción de gestión de cerraduras en el sistema para que los usuarios puedan añadir, quitar o asignar sus puertas.\textit{ Ponderación 5 - Prioridad 2}
+\item Como usuario key del sistema quiero ver un listado de las puertas a las que tengo acceso para poder gestionarlas.\textit{ Ponderación 5 - Prioridad 1}
+\item Como usuario lock del sistema quiero ver un listado de mis puertas para poder gestionarlas.\textit{ Ponderación 5 - Prioridad 1}
+\item Como usuario del sistema quiero que la aplicación requiera de poca energía para que no me consuma rápidamente la batería del celular.\textit{ Ponderación 7 - Prioridad 2}
+\item Como usuario del sistema quiero que la comunicación entre la aplicación y la puerta sea segura para evitar el vandalismo o robo.\textit{ Ponderación 7 - Prioridad 2}
+\item Como CTO de Surix quiero que los usuarios reciban un mail de confirmación al crear su cuenta para añadir seguridad al sistema.\textit{ Ponderación 3 - Prioridad 5}
+\item Como CTO de Surix quiero que el hardware creado sea compatible con el hardware utilizado por la empresa para evitar problemas de integración.\textit{ Ponderación 3 - Prioridad 1}
+\item Como CTO de Surix quiero que las cuentas creadas tengan conexión entre ellas para que los usuario lock puedan dar acceso a los usuarios key.\textit{ Ponderación 7 - Prioridad 1}
+\item Como usuario del sistema quiero que que la aplicación esté siempre actualizada con la base de datos para no tener problemas de acceso a mis puertas.\textit{ Ponderación 5 - Prioridad 2}
+\item Como CTO de Surix quiero que la placa receptora envíe una orden de apertura a la placa de apertura para poder abrir la puerta.\textit{ Ponderación 7 - Prioridad 1}
+\item Como CTO de Surix quiero que la aplicación se comunique con la placa receptora mediante Bluetooth, para que le pueda enviar los datos de identificación.\textit{ Ponderación 10 - Prioridad 1}
+\item Como usuario del sistema quiero que la aplicación funcione en segundo plano para que no interrumpa otros usos del celular.\textit{ Ponderación 7 - Prioridad 2}
 
 
 \end{itemize}
@@ -291,18 +290,18 @@ Definimos como usuario al que hace un uso general del sistema.
 
 
 \begin{enumerate}
-\item Planificación del proyecto (30 hs)
+\item Planificación del proyecto (60 hs)
 	\begin{enumerate}
 	\item Reuniones con el cliente para acordar los diferentes puntos. (5 hs)
 	\item Estudio de los requerimientos planteados por el cliente (15 hs)
-	\item Creación de la documentación. (10 hs)
+	\item Creación de la documentación. (40 hs)
 	\end{enumerate}
 \item Investigación previa (100 hs)
 	\begin{enumerate}
 	\item Estudio del módulo MDBT42Q de Raytac. (20 hs)
 	\item Estudio y preparación del SDK de Nordic para el desarrollo del software en placa. (20 hs)
 	\item Estudio sobre programación en la nube. (20 hs)
-	\item Estudio sobre el protocolo de comunicación bluetooth. (20 hs)
+	\item Estudio sobre el protocolo de comunicación Bluetooth. (20 hs)
 	\item Estudio sobre la programación de aplicaciones híbridas. (20hs)
 	\end{enumerate}
 \item Selección de recursos a utilizar (55 hs)
@@ -312,13 +311,13 @@ Definimos como usuario al que hace un uso general del sistema.
 	\item Selección de los lenguajes de programación a utilizar. (15 hs)
 	\item Selección de los entornos de trabajo para la realización del software. (15 hs)
 	\end{enumerate}
-\item Desarrollo del hardware (60 hs)
+\item Desarrollo del hardware (100 hs)
 	\begin{enumerate}
-	\item Realización de la lógica para la apertura de la puerta (20 hs)
-	\item Realización del esquemático de la placa receptora. (20 hs)
-	\item Realización del esquemático de la placa de apertura. (20 hs)
+	\item Diseño de la lógica para la apertura de la puerta (20 hs)
+	\item Realización del esquemático de la placa receptora. (40 hs)
+	\item Realización del esquemático de la placa de apertura. (40 hs)
 	\end{enumerate}
-\item Desarrollo del software (275 hs)
+\item Desarrollo del software (295 hs)
 	\begin{enumerate}
 	\item Desarrollo del software en la nube (65 hs)
 		\begin{enumerate}
@@ -330,153 +329,97 @@ Definimos como usuario al que hace un uso general del sistema.
 	\item Desarrollo de la aplicación (140 hs)
 		\begin{enumerate}
 		\item Desarrollo de la interfaz principal de usuario. (20 hs)
-		\item Comunicación con bluetooth para Android e iOS. (30 hs)
+		\item Comunicación con Bluetooth para Android e iOS. (30 hs)
 		\item Desarrollo de la interfaz y funcionalidad para la creación de cuenta. (20 hs)
 		\item Desarrollo de la interfaz y funcionalidad para la configuración de cuenta. (30 hs)
 		\item Integración y depuración del código para su funcionamiento tanto en Android como en iOS. (40 hs)
 		\end{enumerate}
 	\item Implementación de la base de datos en la nube. (30 hs)
-	\item Desarrollo del software en la placa receptora. (40 hs)
+	\item Desarrollo del software en la placa receptora. (60 hs)
 	\end{enumerate}
 \item Pruebas de integración (105 hs)
 	\begin{enumerate}
 	\item Implementación de la comunicación entre el software en la nube y la aplicación. (35 hs)
-	\item Implementación de la comunicación vía bluetooth entre el software en la placa y la aplicación. (35 hs)
+	\item Implementación de la comunicación vía Bluetooth entre el software en la placa y la aplicación. (35 hs)
 	\item Implementación y pruebas del sistema completo. (35 hs)
 	\end{enumerate}
 	
 \end{enumerate}
 
-Cantidad total de horas: (625 hs)
+Cantidad total de horas: (715 hs)
 
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
-
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
-
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
-
-\end{consigna}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=.9\textwidth]{./Figuras/Aon2.png}
 \caption{Diagrama en \textit{Activity on Node}}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
+
+\begin{itemize}
+\item El camino crítico lleva un total de 640 horas.
+\item Si la tarea 2.4 lleva más tiempo del estipulado, el camino que pasa por la misma hacia la 5.4 se convertiría en crítico.
+\end{itemize}
 
 
 
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
-
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre las cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
 
 \begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
+\centering
+\includegraphics[width=1\textwidth]{./Figuras/DdG (2).png}
+\caption{Cuadro diagrama de gantt}
 \label{fig:gantt}
 \end{figure}
 
-\end{consigna}
+\begin{figure}[htbp]
+
+\centering
+\includegraphics[width=1.5\textwidth , angle=90]{./Figuras/DdG (1).png}
+\caption{Diagrama de gantt}
+\label{fig:gantt}
+\end{figure}
 
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
 
 
-\begin{table}
+
+\begin{table}[h!]
 \label{tab:recursos}
 \centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|c|@{}}
+\begin{tabularx}{\linewidth}{@{}|c|X|c|c|c|c|c|c|c|@{}}
 \hline
-\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Material 1 & Material 2 & Material 3 & Material 4 \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{7}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-9} 
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}}& PC & Kicad & VS Code & SimulIDE & AWS & \begin{tabular}[c]{@{}c@{}}Placa\\ MDBT42Q \\ y J-link \end{tabular} & Celular  \\ \hline
+ 1& Planificación & 60 & - & - & - & - & - & -  \\ \hline
+ 2& Estudio & 90 & - & 10 & - & - & - & - \\ \hline
+ 3& Selección de recursos & 45 & - & - & - & - & -& - \\ \hline
+ 4.1&Diseño de la lógica para la apertura de la puerta  & - & - & - & 20 & - & - & -\\ \hline
+ 4.2& Diseño del esquemático de la placa receptora   & - &  20 & - & - & - & - & - \\ \hline
+ 4.3& Realización del esquemático de la placa de apertura & - &  20 & - & - & - & - & - \\ \hline
+ 5.1& Desarrolo del software en la nube  & - & - & 30 & - & 35 & -  & -\\ \hline
+ 5.2& Desarrollo de la aplicación & - & - & 120 & - & - & - & 20\\ \hline 
+ 5.3& Impl. de la base de datos en la nube & - & - & 15 & - & 15 & - & -\\ \hline
+ 5.4& Desarrollo del software en la placa receptora & - & - &  40 & - & - & 20 & -  \\ \hline
+6& Pruebas de integración& - & - & 60 & - & 20 & 20 & 5 \\ \hline
+
 
 \end{tabularx}%
 \end{table}
+ \newpage
 
 
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -489,104 +432,81 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+ Horas de ingeniero jr&
+  \multicolumn{1}{c|}{715} &
+  \multicolumn{1}{c|}{\$563} &
+  \multicolumn{1}{c|}{\$402545} \\ \hline
+ Placa MDBT42Q&
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{\$1432.62} &
+  \multicolumn{1}{c|}{\$1432.62} \\ \hline
+   SEGGER J-Link&
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{\$30363.23} &
+  \multicolumn{1}{c|}{\$30363.23} \\ \hline
+  Componentes electrónicos varios&
+  \multicolumn{1}{c|}{-} &
+  \multicolumn{1}{c|}{-} &
+  \multicolumn{1}{c|}{\$1130.1} \\ \hline
+   Diseño y fabricación del pcb&
+  \multicolumn{1}{c|}{2} &
+  \multicolumn{1}{c|}{\$8000} &
+  \multicolumn{1}{c|}{\$16000} \\ \hline
+  Montaje del prototipo&
+  \multicolumn{1}{c|}{2} &
+  \multicolumn{1}{c|}{\$760} &
+  \multicolumn{1}{c|}{\$1520} \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{\$452990.95} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+\multicolumn{3}{|c|}{30\% de los costos directos} &
+  \multicolumn{1}{c|}{\$135897.28} \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{\$135897.28} \\ \hline
 \rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
+\multicolumn{3}{|c|}{TOTAL} & \$588888.23
    \\ \hline
 \end{tabularx}%
 \end{table}
 
+Aclaraciones:
+\begin{itemize}
+\item La empresa es la encargada de realizar todas las compras y también es la encargada de realizar las contrataciones para los diseños necesarios que no fueron pactados para este proyecto, por lo que los costos mostrados son estimativos.
+\item Para detallar algunos de los costos anteriores en pesos argentinos, se utilizó la cotización del dólar estadounidense a \$75,6.
+\end{itemize}
+
+\newpage
 
 \section{11. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
-\begin{consigna}{red}
-Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
 
-\begin{table}[htpb]
+
+\begin{table}[h!]
 \centering
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabularx}{\linewidth}{|c|X|c|c|c|c|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
-  \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
-  Responsable &
-  Orientador &
-  Equipo &
-  Cliente \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
-  \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
-  \authorname &
-  \supname &
-  Nombre de alguien &
-  \clientename \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-\end{tabular}%
-}
+\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular} & 
+\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular} & 
+\begin{tabular}[c]{@{}c@{}} Responsable \\ \authorname \end{tabular}  & \begin{tabular}[c]{@{}c@{}} Orientador \\ \supname \end{tabular} & \begin{tabular}[c]{@{}c@{}} Colaborador \\ Raúl Camacho \end{tabular} & \begin{tabular}[c]{@{}c@{}} Cliente \\ \clientename \end{tabular} \\ \hline
+      1 & Planificación & P  &  A   &   & I    \\ \hline
+      2 & Estudio  & P  &  C   &   &    \\ \hline
+      3 & Selección de recursos  & P  &  C   &  S & A     \\ \hline
+      4.1 & Diseño de la lógica para la apertura de la puerta  & P  &  C   &   C & A    \\ \hline
+      4.2 & Realización del esquemático de la placa receptora & P & C & P & A \\ \hline
+      4.3 & Realización del esquemático de la placa de apertura & P  &  C   &  S & A   \\ \hline
+      5.1 & Desarrollo del software en la nube & P & I & & A \\ \hline
+      5.2 & Desarrollo de la aplicación & P & I & & A \\ \hline
+      5.3 & Impl. de la base de datos en la nube & P & I & & A \\ \hline
+      5.4 & Desarrollo del software en la placa receptora & P & C & C & A \\ \hline
+      6 & Pruebas de integración & P & C & C & A \\ \hline
+
+\end{tabularx}%
 \end{table}
 
-{\footnotesize
-Referencias:
-\begin{itemize}
-	\item P = Responsabilidad Primaria
-	\item S = Responsabilidad Secundaria
-	\item A = Aprobación
-	\item I = Informado
-	\item C = Consultado
-\end{itemize}
-} %footnotesize
 
-Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
-A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
 
-Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
-
-\end{consigna}
 
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
