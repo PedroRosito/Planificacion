@@ -69,6 +69,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.4     & Se agregaron las historias de usuario & 14/09/2020 \\ \hline
 1.5		& Se realizaron correcciones y se completo hasta el punto 11 inclusive & 21/09/2020 \\ \hline
 1.6     & Se finalizó con los puntos faltantes & 28/09/2020 \\ \hline
+1.7     & Se realizaron correcciones finales & 4/10/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -85,7 +86,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en un sistema de identificación mobile utilizando tecnología Bluetooth, y tendrá un presupuesto preliminar estimado de 715 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en un sistema de identificación mobile utilizando tecnología Bluetooth, y tendrá un presupuesto preliminar estimado de 715 hs de trabajo y \$588888.23, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -506,6 +507,17 @@ Aclaraciones:
 \end{tabularx}%
 \end{table}
 
+Referencias: 
+\begin{itemize}
+
+
+\item P = Responsabilidad Primaria 
+\item S = Responsabilidad Secundaria 
+\item A = Aprobación 
+\item I = Informado 
+\item C = Consultado 
+\end{itemize}
+
 
 
 
@@ -602,7 +614,7 @@ Riesgo 1: No llegar a cumplir con los tiempos especificados en el plan de proyec
 
 Riesgo 3: Que se pierda el código realizado para el sistema.
 \begin{itemize}
-\item Plan de mitigación: Realizar un backup del código en un repositorio github y en google drive.
+\item Plan de mitigación: Realizar un backup del código en google drive y utilizar GIT como sistema de control de versiones con sincronizado a un repositorio remoto en github.
 	\begin{itemize}
 	\item Severidad (S): 9. La severidad no cambia ya que implicaría de igual modo un atraso de tiempo importante para el proyecto.
 	\item Ocurrencia (O): 1. Al tener múltiples backups las posibilidades de que se dañen o por cualquier motivo se pierdan todos en simultáneo es muy poco probable.
@@ -652,7 +664,7 @@ Riesgo 4: Imposibilidad de realizar la instalación y conexionado para la progra
 	\item Podrá enviar una orden de apertura a la placa de apertura mediante un tren de pulsos.
 		\begin{itemize}
 		\item Verificación: Análisis de las hojas de datos del módulo MDBT42Q.
-		\item Validación: Constatar mediante la programación de la placa que es capaz de enviar un tren de pulsos.
+		\item Validación: Constatar mediante la programación de la placa y el uso de un osciloscopio que es capaz de enviar un tren de pulsos.
 		\end{itemize}
 		
 			\item La lógica de apertura no podrá ser realizada de forma externa al sistema para evitar el vandalismo o robo.
@@ -718,13 +730,13 @@ Riesgo 4: Imposibilidad de realizar la instalación y conexionado para la progra
 	\item Se debe comunicar periódicamente con el software en la nube para revalidar permisos.
 		\begin{itemize}
 		\item Verificación: Análisis del código de la aplicación y del método de comunicación con la base de datos.
-		\item Validación: Una vez finalizada la aplicación constatar que se comunica periódicamente con el software en la nube.
+		\item Validación: Constatar mediante pruebas de uso que la aplicación revalida periódicamente sus permisos comunicándose con el software en la nube.
 		\end{itemize}
 		
 		\item La comunicación entre la aplicación y la placa receptora debe ser segura.
 		\begin{itemize}
 		\item Verificación: Análisis del código de la aplicación y del protocolo de comunicación Bluetooth.
-		\item Validación: Una vez finalizada la aplicación constatar que la comunicación de la misma con la placa se encuentra encriptada.
+		\item Validación: Constatar mediante pruebas de uso que la comunicación no puede ser vulnerada ni descifrada.
 		\end{itemize}
 	\end{enumerate}
 	
